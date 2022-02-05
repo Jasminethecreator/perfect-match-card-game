@@ -95,4 +95,10 @@ console.log(cards)
 
 function render() {
     messageEl.textContent = message
+    let appendCard
+    cards.forEach(function(card, idx) {
+    appendCard = document.createElement('div')
+    appendCard.id = idx
+    console.log(appendCard)
+ })
 }
