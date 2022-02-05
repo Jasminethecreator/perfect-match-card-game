@@ -30,3 +30,5 @@ resetBtn.addEventListener('click',function (evt) {
 playArea.addEventListener('click',function (evt) {
     console.log(evt.target)
 })
+
+// Functions
