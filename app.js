@@ -12,7 +12,7 @@ let cards, message, matchesRemaining, turn, seconds, tickInterval, waitingForTim
 
 
 // Element Refernces
-const restDiv = document.getElementById('reset-div')
+const resetDiv = document.getElementById('reset-div')
 const difficutlyBtns=document.getElementById('difficulty-buttons')
 const messageEl= document.getElementById('message')
 const playArea= document.getElementById('play-area')
@@ -20,10 +20,10 @@ const resetBtn= document.getElementById('reset-button')
 
 // Event Listenters
 difficutlyBtns.addEventListener('click',function (evt) {
-
     if(evt.target.classList.contains('btn')) {
         difficutlyBtns.classList.add('hidden')
         resetDiv.classList.remove('hidden')
+        messageEl.textContent= 'Jasmine'
 
     }
 })
@@ -42,12 +42,22 @@ init()
 function init () {
     difficutlyBtns.classList.remove('hidden')
     resetDiv.classList.add('hidden')
+    message = 'Please select'
     render ()
-
+    waitingForTimeout = false
+    turn = 1
+    playArea.innerHTML = ""
+    render()
 }
 
 function handleCardClick () {
+//if turn is 1, handle the first card begin picked
+//if turn is -1, handle the second card begin picked
 
-    render ()
 
+}
+
+function render() {
+
+messageEl.textContent=message
 }
