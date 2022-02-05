@@ -23,8 +23,7 @@ difficutlyBtns.addEventListener('click',function (evt) {
     if(evt.target.classList.contains('btn')) {
         difficutlyBtns.classList.add('hidden')
         resetDiv.classList.remove('hidden')
-        messageEl.textContent= 'Jasmine'
-
+        setDifficulty(difficulty[evt.target.id])
     }
 })
 
@@ -42,14 +41,13 @@ init()
 function init () {
     difficutlyBtns.classList.remove('hidden')
     resetDiv.classList.add('hidden')
-    message = 'Please select'
+    message = 'Please select difficulty '
     waitingForTimeout = false
     turn = 1
     playArea.innerHTML = ""
     cards = []
     matchesRemaining = 0 
     seconds = 0
-    //resting the interval
     clearInterval(tickInterval)
     tickInterval = setInterval(tick,1000)
     render()
@@ -57,9 +55,7 @@ function init () {
 
 
 function tick (){
-
     seconds++
-    console.log(seconds)
 }
 
 
@@ -71,12 +67,12 @@ function handleCardClick () {
 }
 
 
-function setDifficulty () {
+function setDifficulty (numCards) {
+    console.log(numCards)
 // accecpt vaule of card to add to card deck
-//set macthRemaning based on diffucly selected
+//set macthRemaning based on difficulty selected
 }
 
 function render() {
-
     messageEl.textContent = message
 }
