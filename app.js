@@ -23,14 +23,13 @@ difficutlyBtns.addEventListener('click',function (evt) {
 
     if(evt.target.classList.contains('btn')) {
         difficutlyBtns.classList.add('hidden')
-        resetBtn.classList.remove('hidden')
+        resetDiv.classList.remove('hidden')
 
     }
 })
 
-resetBtn.addEventListener('click',function (evt) {
-    console.log(evt.target)
-})
+resetBtn.addEventListener('click',init) 
+
 
 playArea.addEventListener('click',function (evt) {
     console.log(evt.target)
@@ -42,7 +41,7 @@ init()
 
 function init () {
     difficutlyBtns.classList.remove('hidden')
-    resetBtn.classList.add('hidden')
+    resetDiv.classList.add('hidden')
     render ()
 
 }
