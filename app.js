@@ -73,8 +73,8 @@ function setDifficulty (numCards) {
     let deckCopy = [...deck]
     let randomCard
     let cardsToshuffle =[]
-    for (let i = 0; i <numCards; i++) {
-        randomcard = deckCopy.splice(Math.random()* deckCopy.length,1)
+    for (let i = 0; i <  numCards; i++) {
+        randomCard = deckCopy.splice(Math.random()* deckCopy.length,1)[0]
         cardsToshuffle.push(randomCard,randomCard)
     }
     console.log(numCards)
@@ -85,7 +85,8 @@ function setDifficulty (numCards) {
 function shuffle (cardsIn) {
 //shuffle cars passed in 
 //set cars array sinf the newly shuffled items 
-    render()
+   console.log(cardsIn)
+render()
 }
 
 function render() {
