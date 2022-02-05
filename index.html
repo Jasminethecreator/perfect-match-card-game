@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
     <title>Memory card game</title>
 </head>
 <body>
@@ -19,26 +19,29 @@
      <h2 id ="message" class="text-black"> Please select a difficulty:</h2>
 
  <!-- buttons  -->
-     <div id="difficulty-btn">
+     <div id="difficulty-buttons">
 
-        <button><div class="btn btn-lg btn-success" id ="easy ">easy</div></button>      
-        <button><div class="btn btn-lg btn-warning" id ="meduim">Medium</div></button>                  
-        <button><div class="btn btn-lg btn-danger" id ="hard">Hard</div></button>      
+        <button class="btn btn-lg btn-success" id ="easy" type="button">easy</button>      
+        <button class="btn btn-lg btn-warning" id ="medium" type="button">Medium</button>                  
+        <button class="btn btn-lg btn-danger" id ="hard" type="button">Hard</button>    
+     </div>  
 <!-- buttons  -->
 
 <!-- rest button ; display: none  -->
 
-    <div id="rest-div" class="hidden">
+    <div id="rest-div"  class ="hidden">
         <button id="reset-button" class="btn btn-lg btn-primary">rest</button>
     </div>
 <!-- rest button  -->
 
 <!-- card game  -->
         <div id = "play-area">
-            
+            <!-- <div class = "card large dA"> -->
+
+            </div>
         </div>
 <!-- end of card game  -->
 
-    </div>
+ 
 </body>
 </html>
