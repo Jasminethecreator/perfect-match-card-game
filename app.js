@@ -37,7 +37,8 @@ playArea.addEventListener('click',function (evt) {
      // verfiy use is clicking the card
      if (
          !isNaN(parseInt(evt.target.id)) ||
-         cards[parseInt(evt.target.id)]['faceDown'] 
+         cards[parseInt(evt.target.id)]['faceDown'] &&
+         !waitingForTimeout
 
       ) {
         handleCardClick(parseInt(evt.target.id))
@@ -70,13 +71,24 @@ function tick (){
 }
 
 
-function handleCardClick () {
-    console.log(card1Idx)
-//if turn is 1, handle the first card begin picked
-//if turn is -1, handle the second card begin picked
-    turn *= -1
+function handleCardClick(cardIdx) {
+    if (turn === 1) {
+      message = 'Find the match!'
+      card1Idx = cardIdx
+      card1Val = cards[card1Idx]['faceDown']
+      cards[card1Idx] = {'currentPick': card1Val}
+      console.log(card1Val,card1Val)
+    } else {
+        card2Idx = cardIdx
+        card2Val = cards[card2Idx]['faceDown']
+        cards[card2Idx] = {'currentPick': card2Val}
+        waitingForTimeout = true
+        setTimeout(function() {
+        compareCards(card1Val, card2Val)
+        }, 1000)
 
-}
+    }
+
 
 
 function setDifficulty (numCards) {
@@ -90,8 +102,8 @@ function setDifficulty (numCards) {
         cardsToshuffle.push(randomCard,randomCard)
     }
         matchesRemaining = numCards
-    console.log(numCards)
-    shuffle(cardsToshuffle)
+        console.log(numCards)
+        shuffle(cardsToshuffle)
 }
 
 
@@ -101,12 +113,12 @@ for (let i = 0; i = cardsIn.length; i++) {
     cardsToshuffle = cardsIn.splice(Math.random() * cardsIn.length,1)
     cards.push({'faceDown': `${cardsToshuffle}`})
 }
-console.log(cards)
     render()    
 }
 
 function render() {
     messageEl.textContent = message
+    playArea.innerHTML =''
     let appendCard
     cards.forEach(function(card, idx) {
     appendCard = document.createElement('div')
