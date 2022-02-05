@@ -75,8 +75,13 @@ function setDifficulty (numCards) {
     let cardsToshuffle =[]
     console.log(numCards)
     render()
-// accecpt vaule of card to add to card deck
-//set macthRemaning based on difficulty selected
+    shuffle()
+}
+
+
+function shuffle (cardsIn) {
+//shuffle cars passed in 
+
 }
 
 function render() {
