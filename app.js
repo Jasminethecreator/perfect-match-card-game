@@ -68,7 +68,11 @@ function handleCardClick () {
 
 
 function setDifficulty (numCards) {
+    // shuffle
     message = 'pick a card'
+    let deckCopy = [...deck]
+    let randomCard
+    let cardsToshuffle =[]
     console.log(numCards)
     render()
 // accecpt vaule of card to add to card deck
