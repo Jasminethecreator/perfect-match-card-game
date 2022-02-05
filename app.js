@@ -18,4 +18,15 @@ const message= document.getElementById('message')
 const playarea= document.getElementById('play-area')
 const resetBtn= document.getElementById('reset-button')
 
-console.log(resetDiv)
+// Event Listenters
+difficutlyBtns.addEventListener('click',function (evt) {
+    console.log(evt.target)
+})
+
+resetBtn.addEventListener('click',function (evt) {
+    console.log(evt.target)
+})
+
+playArea.addEventListener('click',function (evt) {
+    console.log(evt.target)
+})
