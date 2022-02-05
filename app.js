@@ -10,3 +10,12 @@ const difficulty = {
 // Variables
 let cards= message,matchesRemaining, turn, seconds,tickInterval, waitingForTimeout,card1Indx, card1Val,card2Idx,card2Val
 
+
+// Element Refernces
+const restDiv = document.getElementById('reset-div')
+const difficutlyBtns=document.getElementById('difficulty-buttons')
+const message= document.getElementById('message')
+const playarea= document.getElementById('play-area')
+const resetBtn= document.getElementById('reset-button')
+
+console.log(resetDiv)
