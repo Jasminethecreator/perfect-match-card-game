@@ -47,17 +47,26 @@ function init () {
     waitingForTimeout = false
     turn = 1
     playArea.innerHTML = ""
+    cards = []
+    matchesRemaining = 0 
+    seconds = 0
     render()
 }
 
 function handleCardClick () {
 //if turn is 1, handle the first card begin picked
 //if turn is -1, handle the second card begin picked
+    turn *= -1
+
+}
 
 
+function setDifficulty () {
+// accecpt vaule of card to add to card deck
+//set macthRemaning based on diffucly selected
 }
 
 function render() {
 
-messageEl.textContent=message
+    messageEl.textContent = message
 }
