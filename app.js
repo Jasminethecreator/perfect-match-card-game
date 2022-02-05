@@ -20,7 +20,12 @@ const resetBtn= document.getElementById('reset-button')
 
 // Event Listenters
 difficutlyBtns.addEventListener('click',function (evt) {
-    console.log(evt.target)
+
+    if(evt.target.classList.contains('btn')) {
+        difficutlyBtns.classList.add('hidden')
+        resetBtn.classList.remove('hidden')
+
+    }
 })
 
 resetBtn.addEventListener('click',function (evt) {
@@ -32,3 +37,18 @@ playArea.addEventListener('click',function (evt) {
 })
 
 // Functions
+
+init()
+
+function init () {
+    difficutlyBtns.classList.remove('hidden')
+    resetBtn.classList.add('hidden')
+    render ()
+
+}
+
+function handleCardClick () {
+
+    render ()
+
+}
