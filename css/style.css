@@ -19,11 +19,11 @@ text-align:center;
     width: 4.0em;
     height: 5.5em;
     /* Add a default background color and border. */
-    background-color: #fff;
+    background-color: rgb(209, 30, 30);
     border-radius: 0.20em;
     /* Scale and set the background settings. */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: contain;
     text-indent: 100%;
     white-space: nowrap;
