@@ -43,15 +43,25 @@ function init () {
     difficutlyBtns.classList.remove('hidden')
     resetDiv.classList.add('hidden')
     message = 'Please select'
-    render ()
     waitingForTimeout = false
     turn = 1
     playArea.innerHTML = ""
     cards = []
     matchesRemaining = 0 
     seconds = 0
+    //resting the interval
+    clearInterval(tickInterval)
+    tickInterval = setInterval(tick,1000)
     render()
 }
+
+
+function tick (){
+
+    seconds++
+    console.log(seconds)
+}
+
 
 function handleCardClick () {
 //if turn is 1, handle the first card begin picked
