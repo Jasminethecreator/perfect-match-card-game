@@ -287,7 +287,6 @@ text-align:center;
   .card.joker-red {
     background-image: url("../images/jokers/joker-red.svg"); 
 }
-.card.back {
-    background-image: url("../images/backs/back-card.png"); 
+.card.back-card {
+    background-image: url("../images/back/back-card.png"); 
 }
-  
