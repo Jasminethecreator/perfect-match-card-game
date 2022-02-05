@@ -77,17 +77,31 @@ function handleCardClick(cardIdx) {
       card1Idx = cardIdx
       card1Val = cards[card1Idx]['faceDown']
       cards[card1Idx] = {'currentPick': card1Val}
-      console.log(card1Val,card1Val)
     } else {
         card2Idx = cardIdx
         card2Val = cards[card2Idx]['faceDown']
         cards[card2Idx] = {'currentPick': card2Val}
-        waitingForTimeout = true
         setTimeout(function() {
-        compareCards(card1Val, card2Val)
-        }, 1000)
+            compareCards(card1Val, card2Val)
+        },1000)
+    }
+        turn *= -1
+        render()
+    }
+
+function compareCards(card1Val,card2Val) {
+        console.log(card1Val,card2Val)
+//if cards match
+    if (card1Val === card2Val) {
+
+    } else {
+        message='try again'
+        cards[card1Idx] = {'facedown':card1Val}
+        cards[card2Idx] = {'facedown':card2Val}
 
     }
+    render()
+}
 
 
 
@@ -102,7 +116,6 @@ function setDifficulty (numCards) {
         cardsToshuffle.push(randomCard,randomCard)
     }
         matchesRemaining = numCards
-        console.log(numCards)
         shuffle(cardsToshuffle)
 }
 
