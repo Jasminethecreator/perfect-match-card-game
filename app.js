@@ -68,7 +68,9 @@ function handleCardClick () {
 
 
 function setDifficulty (numCards) {
+    message = 'pick a card'
     console.log(numCards)
+    render()
 // accecpt vaule of card to add to card deck
 //set macthRemaning based on difficulty selected
 }
