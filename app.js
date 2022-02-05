@@ -99,6 +99,15 @@ function render() {
     cards.forEach(function(card, idx) {
     appendCard = document.createElement('div')
     appendCard.id = idx
-    console.log(appendCard)
- })
-}
+    //conditions
+    //if the card is faced down
+    if (card['faceDown']) {
+        appendCard.className = "card large back-card"
+    } else if (card['currentPick']) {
+      appendCard.className = `card large ${card['currentPick']}`
+    } else if (card['matched']) {
+      appendCard.className = `card large ${card['matched']}`
+    }
+    playArea.appendChild(appendCard)
+  })
+} 
