@@ -77,6 +77,7 @@ function setDifficulty (numCards) {
         randomCard = deckCopy.splice(Math.random()* deckCopy.length,1)[0]
         cardsToshuffle.push(randomCard,randomCard)
     }
+        matchesRemaining = numCards
     console.log(numCards)
     shuffle(cardsToshuffle)
 }
