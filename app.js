@@ -74,8 +74,8 @@ function setDifficulty (numCards) {
     let randomCard
     let cardsToshuffle =[]
     for (let i = 0; i <numCards; i++) {
-        //randomcard =
-    cardsToshuffle.push(randomCard)
+        randomcard = deckCopy.splice(Math.random()* deckCopy.length,1)
+        cardsToshuffle.push(randomCard,randomCard)
     }
     console.log(numCards)
     shuffle(cardsToshuffle)
