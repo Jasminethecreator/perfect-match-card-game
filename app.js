@@ -31,8 +31,19 @@ resetBtn.addEventListener('click',init)
 
 
 playArea.addEventListener('click',function (evt) {
-    console.log(evt.target)
+    //verfiy that waitingForTimeout is false
+    // verfiy that the card is faced down
+     // verfiy that the card is faced down
+     // verfiy use is clicking the card
+     if (
+         !isNaN(parseInt(evt.target.id)) ||
+         cards[parseInt(evt.target.id)]['faceDown'] 
+
+      ) {
+        handleCardClick(parseInt(evt.target.id))
+     }
 })
+
 
 // Functions
 
@@ -60,6 +71,7 @@ function tick (){
 
 
 function handleCardClick () {
+    console.log(card1Idx)
 //if turn is 1, handle the first card begin picked
 //if turn is -1, handle the second card begin picked
     turn *= -1
