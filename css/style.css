@@ -6,32 +6,38 @@
 
 body{
 text-align:center;
-background-color: rgb(230, 209, 26);
+background-color: hsl(128, 22%, 48%);
 
 }
 
+#nav-title{
+  font-family: 'Unica One', cursive;
+  font-size: 45px;
+  margin: 12px;
+  padding: 7px;
+}
 .hidden{
     display: none;
 }
 .card {
     display: inline-block;
-    margin: 9px 5px 50px 5px;
+    margin: 9px 5px 5px 5px;
     font-size: inherit;
-    width: 5.0em;
-    height: 5.5em;
+    width: 3.0em;
+    height: 5.0em;
     border-radius: 0.20em;
     /* Scale and set the background settings. */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    text-indent: 100%;
+    /* text-indent: 100%; */
     white-space: nowrap;
     overflow: hidden;
 }
     .card.small {
       font-size: 12px; }
     .card.large {
-      font-size: 26px; }
+      font-size: 37px; }
     .card.xlarge {
       font-size: 42px; }
     .card.no-border {

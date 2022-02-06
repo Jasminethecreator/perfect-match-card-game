@@ -107,7 +107,7 @@ function compareCards(card1Val,card2Val) {
         cards[card2Idx] = {'faceDown':card2Val}
 
     }
-    waitingForTimeout=false
+    waitingForTimeout = false
     render()
 }
 
