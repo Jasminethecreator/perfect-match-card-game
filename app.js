@@ -96,8 +96,8 @@ function compareCards(card1Val,card2Val) {
 
     } else {
         message='try again'
-        cards[card1Idx] = {'facedown':card1Val}
-        cards[card2Idx] = {'facedown':card2Val}
+        cards[card1Idx] = {'faceDown':card1Val}
+        cards[card2Idx] = {'faceDown':card2Val}
 
     }
     render()

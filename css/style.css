@@ -6,6 +6,7 @@
 
 body{
 text-align:center;
+background-color: rgb(230, 209, 26);
 
 }
 
@@ -14,12 +15,10 @@ text-align:center;
 }
 .card {
     display: inline-block;
-    margin: 5px 5px 50px 5px;
+    margin: 9px 5px 50px 5px;
     font-size: inherit;
-    width: 4.0em;
+    width: 5.0em;
     height: 5.5em;
-    /* Add a default background color and border. */
-    background-color: rgb(209, 30, 30);
     border-radius: 0.20em;
     /* Scale and set the background settings. */
     background-repeat: no-repeat;
@@ -37,11 +36,8 @@ text-align:center;
       font-size: 42px; }
     .card.no-border {
       border: 0; }
-    .card.shadow {
-      box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75); }
-    .card.outline {
-      background-image: none;
-    }
+   
+    
 
 
 
