@@ -93,6 +93,7 @@ function compareCards(card1Val,card2Val) {
         console.log(card1Val,card2Val)
 //if cards match
     if (card1Val === card2Val) {
+        matchesRemaining -= 1
 
     } else {
         message='try again'
@@ -108,7 +109,7 @@ function compareCards(card1Val,card2Val) {
 function setDifficulty (numCards) {
     // shuffle
     message = 'pick a card'
-    let deckCopy = [...deck]
+    let deckCopy = [...deck] 
     let randomCard
     let cardsToshuffle =[]
     for (let i = 0; i <  numCards; i++) {
