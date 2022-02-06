@@ -36,7 +36,7 @@ playArea.addEventListener('click',function (evt) {
      // verfiy that the card is faced down
      // verfiy use is clicking the card
      if (
-         !isNaN(parseInt(evt.target.id)) ||
+         !isNaN(parseInt(evt.target.id)) &&
          cards[parseInt(evt.target.id)]['faceDown'] &&
          !waitingForTimeout
 
@@ -56,12 +56,12 @@ function init () {
     message = 'Please select difficulty '
     waitingForTimeout = false
     turn = 1
-    playArea.innerHTML = ""
+    playArea.innerHTML = ''
     cards = []
     matchesRemaining = 0 
     seconds = 0
     clearInterval(tickInterval)
-    tickInterval = setInterval(tick,1000)
+    tickInterval = setInterval(tick, 1000)
     render()
 }
 
@@ -81,6 +81,7 @@ function handleCardClick(cardIdx) {
         card2Idx = cardIdx
         card2Val = cards[card2Idx]['faceDown']
         cards[card2Idx] = {'currentPick': card2Val}
+        waitingForTimeout = true
         setTimeout(function() {
             compareCards(card1Val, card2Val)
         },1000)
@@ -94,6 +95,11 @@ function compareCards(card1Val,card2Val) {
 //if cards match
     if (card1Val === card2Val) {
         matchesRemaining -= 1
+        message = `Nice work! ${matchesRemaining} pair${matchesRemaining !== 1 ? 's' : ''} left!`
+        if (matchesRemaining === 0) {
+            message = `Congratulations, you found all the matches in ${Math.floor(seconds/60)}:${seconds}`
+            clearInterval(tickInterval)
+          }
 
     } else {
         message='try again'
@@ -101,6 +107,7 @@ function compareCards(card1Val,card2Val) {
         cards[card2Idx] = {'faceDown':card2Val}
 
     }
+    waitingForTimeout=false
     render()
 }
 
