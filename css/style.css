@@ -20,16 +20,6 @@ background-color: #953643;
     display: none;
 }
 
-#difficulty-buttons {
-  background-color: #161515;
-  border: none;
-  color: #ded1be;
-  padding: 8px 16px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-}
 
 
 .card {
