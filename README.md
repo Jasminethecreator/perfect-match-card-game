@@ -1,7 +1,7 @@
 
 
 
-![Perfect Match memory card game](./image/perfectmatchcover.png?raw=true)
+![Perfect Match memory card game](perfectmatchcover.png?raw=true)
 
 
 ## [View Live Site](https://perfect-match-card-game.vercel.app/)
