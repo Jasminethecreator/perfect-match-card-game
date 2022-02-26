@@ -6,13 +6,13 @@
 
 body{
 text-align:center;
-background-color: hsl(128, 22%, 48%);
+background-color: #953643;
 
 }
 
 #nav-title{
-  font-family: 'Unica One', cursive;
-  font-size: 45px;
+  font-family: 'Unica One';
+  font-size: 78px;
   margin: 12px;
   padding: 7px;
 }
@@ -22,7 +22,6 @@ background-color: hsl(128, 22%, 48%);
 .card {
     display: inline-block;
     margin: 9px 5px 5px 5px;
-    font-size: inherit;
     width: 3.0em;
     height: 5.0em;
     border-radius: 0.20em;
