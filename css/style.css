@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
     margin: 0%;
+    font-family: 'Unica One';
+
     
 }
 
@@ -11,7 +13,6 @@ background-color: #953643;
 }
 
 #nav-title{
-  font-family: 'Unica One';
   font-size: 78px;
   margin: 12px;
   padding: 7px;
@@ -22,6 +23,9 @@ background-color: #953643;
 }
 
 
+#message {
+    margin:6;px
+}
 
 .card {
     display: inline-block;
@@ -47,7 +51,7 @@ background-color: #953643;
       border: 0; }
    
     
-    #easy #medium #hard {
+    #easy, #medium, #hard, #rest-btn {
     color:#ded1be;
     background-color:#161515;
 }
