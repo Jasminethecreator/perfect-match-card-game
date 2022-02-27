@@ -16,6 +16,7 @@ background-color: #953643;
   margin: 12px;
   padding: 7px;
 }
+
 .hidden{
     display: none;
 }
@@ -46,8 +47,10 @@ background-color: #953643;
       border: 0; }
    
     
-
-
+.easy .medium .hard {
+    color:#ded1be;
+    background-color:#161515;
+}
 
 .card.dA {
     background-image: url("/images/diamonds/diamonds-A.svg");
