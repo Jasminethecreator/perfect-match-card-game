@@ -51,9 +51,11 @@ background-color: #953643;
       border: 0; }
    
     
-    #easy, #medium, #hard, #rest-btn {
+    #easy, #medium, #hard, #rest-buttotn {
     color:#ded1be;
     background-color:#161515;
+    padding: 15px 32px;
+    text-align: center;
 }
 
 .card.dA {
