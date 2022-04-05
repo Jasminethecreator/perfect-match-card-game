@@ -21,7 +21,6 @@ A 3 level memory card game.
  - [x] A user can view the value of a card when it is clicked
  - [x] When a user finds a match the cards remains faced up.
  - [x] When a user doesn't make a match,the cards flips over.
- - [x] A user can view the value of a card when it is clicked
  - [x] A user can see the number remaing after making a first match.
  - [x] A user can see the total time it took to make all the matches.
 
